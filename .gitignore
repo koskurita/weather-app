@@ -1,0 +1,5 @@
+# Node modules
+weather-backend/node_modules
+
+# Env files
+weather-backend/.env

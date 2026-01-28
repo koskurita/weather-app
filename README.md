@@ -19,12 +19,12 @@ The project consists of a **backend** (Node.js + Express) and a **frontend** (HT
 
 When a user searches for a city, the backend performs the following steps:
   1. Convert city name to geographic coordinates. This is because the openweathermap API requires latitude and longitude.
-     <br>
-      http://api.openweathermap.org/geo/1.0/direct?q={CITY_NAME}&limit=1&appid={API_KEY}
-     <br>
-     The above API will return matching locations with latitude and logitude.
-  <br>
-  *The backend will extract the first match to get the coordinates.
+     
+      <br>http://api.openweathermap.org/geo/1.0/direct?q={CITY_NAME}&limit=1&appid={API_KEY}
+     
+     <br>The above API will return matching locations with latitude and logitude.
+  
+  <br> The backend will extract the first match to get the coordinates.
 
   3. Once we have lat and lon, we call OpenWeatherMap’s One Call API:
      <br>

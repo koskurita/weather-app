@@ -31,11 +31,9 @@ When a user searches for a city, the backend performs the following steps:
 <br>
 
   <br>This returns current weather, daily forecast, and more details.
-  
-  <br>
+
   <br>The backend will format to only include relevant information: current temperature and weather description.
   
-  <br>
   3. Frontend will create a new card dynamically using Javascript. 
 
 

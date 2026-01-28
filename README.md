@@ -15,7 +15,8 @@ The project consists of a **backend** (Node.js + Express) and a **frontend** (HT
 - Error handling for invalid city names
 
 ---
-###How it Works
+### How it Works
+
 When a user searches for a city, the backend performs the following steps:
   1. Convert city name to geographic coordinates. This is because the openweathermap API requires latitude and longitude.
      <br>

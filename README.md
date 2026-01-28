@@ -30,11 +30,11 @@ When a user searches for a city, the backend performs the following steps:
     https://api.openweathermap.org/data/3.0/onecall?lat={LAT}&lon={LON}&exclude=minutely,hourly,alerts&units=metric&appid={API_KEY}
 <br>
 
-  *This returns current weather, daily forecast, and more details.
+  <br>This returns current weather, daily forecast, and more details.
+  
   <br>
-  <br>
-  *The backend will format to only include relevant information: current temperature and weather description.
-  <br>
+  <br>The backend will format to only include relevant information: current temperature and weather description.
+  
   <br>
   3. Frontend will create a new card dynamically using Javascript. 
 

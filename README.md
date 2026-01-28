@@ -14,44 +14,27 @@ The project consists of a **backend** (Node.js + Express) and a **frontend** (HT
 - Cards remain until manually deleted
 - Error handling for invalid city names
 
-## Project Structure
-weather-dashboard/
-├─ weather-backend/
-│ ├─ index.js # Main Express server
-│ ├─ routes/weather.js # Weather API route
-│ ├─ package.json
-│ └─ .env # API key (ignored)
-├─ weather-frontend/
-│ ├─ index.html
-│ ├─ style.css
-│ └─ script.js
-├─ .gitignore
-└─ README.md
-
 ---
 ###How it Works
 When a user searches for a city, the backend performs the following steps:
-  1. Convert city name to geographic coordinates. This is because the openweathermap API requires latitude and longitude. 
+  1. Convert city name to geographic coordinates. This is because the openweathermap API requires latitude and longitude.
+     <br>
       http://api.openweathermap.org/geo/1.0/direct?q={CITY_NAME}&limit=1&appid={API_KEY}
+     <br>
      The above API will return matching locations with latitude and logitude.
-       Example response for London:
-[
-  {
-    "name": "London",
-    "lat": 51.5073219,
-    "lon": -0.1276474,
-    "country": "GB"
-  }
-]
+  <br>
   The backend will extract the first match to get the coordinates.
 
-  2. Once we have lat and lon, we call OpenWeatherMap’s One Call API:
+  3. Once we have lat and lon, we call OpenWeatherMap’s One Call API:
+     <br>
     https://api.openweathermap.org/data/3.0/onecall?lat={LAT}&lon={LON}&exclude=minutely,hourly,alerts&units=metric&appid={API_KEY}
+<br>
 
-  This returns current weather, daily forecast, and more details
+  This returns current weather, daily forecast, and more details.
+  <br>
   The backend will format to only include relevant information: current temperature and weather description.
-  
-  3. TFrontend will create a new card dynamically using Javascript. 
+  <br>
+  3. Frontend will create a new card dynamically using Javascript. 
 
 
 ## Getting Started
